@@ -8,10 +8,10 @@ import SentimentSatisfiedOutlinedIcon from '@mui/icons-material/SentimentSatisfi
 
 
 function ChatRoom() {
-    const [messages, setMessages] = useState([]);
-    const [counterCharMsg, setCounterCharMsg] = useState(0);
-    const bottomScroll = useRef();
-    const inputText = useRef();
+    const [messages, setMessages] = useState([])
+    const [counterCharMsg, setCounterCharMsg] = useState(0)
+    const bottomScroll = useRef()
+    const inputText = useRef()
 
     useEffect(() => {
         db.collection('messages').orderBy('createdAt').onSnapshot(snapshot => {
