@@ -1,6 +1,23 @@
 .chatRoom{
     max-width: 650px;
     width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #F51F45, #4ED6B4);
+    border-radius: 1em;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .chatRoomControlls{
@@ -8,8 +25,8 @@
     justify-content: center;
     background-color: white;
     padding: 2rem;
-    border-bottom-right-radius: 1em;
-    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .sendButton{
@@ -38,7 +55,7 @@
     align-items: center;
     padding: 0 1.4rem 0 1.4rem;
     background-color: whitesmoke;
-    border-radius: 4em;
+    border-radius: 10px;
     padding-right: 1rem;
 }
 
@@ -51,7 +68,6 @@
 }
 
 .chatRoomMessages{
-    border-top-left-radius: 1em;
     display: flex;
     flex-direction: column;
     height: 60vh;
@@ -80,8 +96,10 @@
 .chatRoomButtons{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.589);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .message{
@@ -133,4 +151,9 @@
 
 .counterCorrect{
     color: black;
+}
+
+.emojiPicker{
+    position: absolute;
+    top: 49%;
 }
