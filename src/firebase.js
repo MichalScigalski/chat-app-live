@@ -3,6 +3,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
 
+//replace your config below
 const firebaseApp = firebase.initializeApp({
     apiKey: "AIzaSyD1k-UwbkgTv80vKmN33aWMHO3Xyde_GuI",
     authDomain: "reactchatlive.firebaseapp.com",
