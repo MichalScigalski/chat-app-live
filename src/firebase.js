@@ -4,13 +4,12 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
 
 const firebaseApp = firebase.initializeApp({
-  apiKey: "AIzaSyD3GHCow0aD5On2TBWDT08X3y0PI7AI6lI",
-  authDomain: "chatapp-55976.firebaseapp.com",
-  projectId: "chatapp-55976",
-  storageBucket: "chatapp-55976.appspot.com",
-  messagingSenderId: "682638149321",
-  appId: "1:682638149321:web:772f69883182c3d4b7af18",
-  measurementId: "G-H42L19QZKQ"
+    apiKey: "AIzaSyD1k-UwbkgTv80vKmN33aWMHO3Xyde_GuI",
+    authDomain: "reactchatlive.firebaseapp.com",
+    projectId: "reactchatlive",
+    storageBucket: "reactchatlive.appspot.com",
+    messagingSenderId: "661970197463",
+    appId: "1:661970197463:web:ab58446a2910da3c060992"
 })
 
 const db = firebaseApp.firestore();
