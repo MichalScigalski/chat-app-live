@@ -17,7 +17,7 @@ cd ./reactChatApp</code></pre>
 <pre><code>npm start
 </code></pre>
 
-If browser did't run, open it then go to https://localhost:3000/
+If browser didn't run, open it then go to https://localhost:3000/
 
 <br><br />
 
