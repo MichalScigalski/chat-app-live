@@ -18,6 +18,13 @@
     justify-content: center;
 }
 
+
 .SignIn p > * {
     margin: 0 8px;
+    color: white;
+    text-underline-offset: 3px;
+}
+
+.SignIn p a:hover{
+    color: #C51162;
 }
