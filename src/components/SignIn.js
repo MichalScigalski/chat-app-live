@@ -15,7 +15,7 @@ function SignIn() {
         <div className="SignIn">
             <div>
                 <h1>ChatLive</h1>
-                <p><FaGithub fontSize={'20px'}/><a href="https://github.com/MichalScigalski" target="_blank">@MichalScigalski</a></p>
+                <p><FaGithub fontSize={'20px'}/><a href="https://github.com/MichalScigalski" target="_blank" rel="noreferrer">@MichalScigalski</a></p>
                 <Button color="secondary" variant="contained" onClick={signInWithGoogle}>Sign in with Google</Button>
             </div>
         </div>
