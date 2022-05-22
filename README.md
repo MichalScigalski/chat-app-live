@@ -1,7 +1,7 @@
 # React Chat App with Firebase
 
 
-### Demo 
+## Demo 
 https://react-chat-app-eta.vercel.app/
 
 ## Instalation steps 🛠️
