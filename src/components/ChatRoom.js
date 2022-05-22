@@ -12,6 +12,7 @@ function ChatRoom() {
 
     const bottomScroll = useRef()
     const inputText = useRef()
+    const { uid, photoURL } = auth.currentUser;
 
     useEffect(() => {
         db.collection('messages').orderBy('createdAt').onSnapshot(snapshot => {
@@ -21,7 +22,6 @@ function ChatRoom() {
 
     async function sendMessage(e) {
         e.preventDefault();
-        const { uid, photoURL } = auth.currentUser;
         if (formValue !== '' && formValue.length < 300) {
             await db.collection('messages').add({
                 text: formValue,
@@ -60,7 +60,9 @@ function ChatRoom() {
                 <Button color="secondary" variant="outlined" onClick={() => auth.signOut()}>Sign Out</Button>
                 <h3>Hello <strong>{auth.currentUser.displayName}</strong></h3>
                 <Button color="secondary" variant="outlined" onClick={clearChat}>Clear Chat</Button>
-                <Button color="secondary" variant="outlined" onClick={() => deleteCollection('messages')}>Delete data</Button>
+                {uid === process.env.REACT_APP_FIREBASE_UID_ADMIN ?
+                    <Button color="secondary" variant="outlined" onClick={() => deleteCollection('messages')}>Delete data</Button> : null
+                }
             </div>
             <div className="chatRoomMessages">
                 {messages.map(({ id, text, photoURL, uid }, _index) => (
@@ -74,7 +76,6 @@ function ChatRoom() {
             <div>
                 <form className="chatRoomControlls" onSubmit={sendMessage}>
                     <div className="chatRoomControllsInput">
-                        {/* <SentimentSatisfiedOutlinedIcon onClick={()=>setIsPickerClicked(!(isPickerClicked))} className="emojiIcon" color="disabled" /> */}
                         <span className={counterCharMsg >= 300 || counterCharMsg === 0 ? 'counterIncorrect' : 'counterCorrect'}>{counterCharMsg}/300</span>
                         <input ref={inputText} value={formValue} onChange={(e) => { setFormValue(e.target.value); setCounterCharMsg(e.target.value.length) }} placeholder="type a message..." />
                     </div>
