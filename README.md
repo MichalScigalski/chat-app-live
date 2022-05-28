@@ -1,5 +1,5 @@
-# React Chat App with Firebase
-
+# Chat App Live
+React chap app using firebase.
 
 ## Demo 
 https://react-chat-app-eta.vercel.app/
